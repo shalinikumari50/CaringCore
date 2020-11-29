@@ -1,3 +1,9 @@
+
+<p align="center">
+  
+   <img src="./img/caringcore.PNG" >
+  </p>
+
 # CaringCore
 This pandemic brought a lot of changes in our lives, which were adopted easily by us but old-age people find new shiny technology alien. So, we try to provide them with the support they deserve.
 
