@@ -14,6 +14,38 @@
   <link href="../css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
  
   <link href="../css/data.css" rel="stylesheet" />
+  <script>
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      theme: "light2",
+      title:{
+        text: "Vital Signs Measurement"
+      },
+      data: [{        
+        type: "line",
+            indexLabelFontSize: 16,
+        dataPoints: [
+          { y: 450 },
+          { y: 414},
+          { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+          { y: 460 },
+          { y: 450 },
+          { y: 500 },
+          { y: 480 },
+          { y: 480 },
+          { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+          { y: 500 },
+          { y: 480 },
+          { y: 510 }
+        ]
+      }]
+    });
+    chart.render();
+    
+    }
+    </script>
 </head>
 
 <body class="">
@@ -116,6 +148,7 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
+          
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
@@ -172,32 +205,13 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
-              <div class="card card-chart">
-                <div class="card-header card-header-success">
-                  <div class="ct-chart" id="dailySalesChart"></div>
-                </div>
-               
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-chart">
-                <div class="card-header card-header-warning">
-                  <div class="ct-chart" id="websiteViewsChart"></div>
-                </div>
-               
-               
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-chart">
-                <div class="card-header card-header-danger">
-                  <div class="ct-chart" id="completedTasksChart"></div>
-                </div>
-               
-              </div>
-            </div>
+            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+           
           </div>
+
+
+
+
         </div>
       </div>
       
@@ -324,6 +338,7 @@
 
     });
   </script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 
 </html>
