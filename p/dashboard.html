@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Noble Cause</title>
+  <title>Caring Core</title>
   
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -14,38 +14,7 @@
   <link href="../css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
  
   <link href="../css/data.css" rel="stylesheet" />
-  <script>
-    window.onload = function () {
-    
-    var chart = new CanvasJS.Chart("chartContainer", {
-      animationEnabled: true,
-      theme: "light2",
-      title:{
-        text: "Vital Signs Measurement"
-      },
-      data: [{        
-        type: "line",
-            indexLabelFontSize: 16,
-        dataPoints: [
-          { y: 450 },
-          { y: 414},
-          { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
-          { y: 460 },
-          { y: 450 },
-          { y: 500 },
-          { y: 480 },
-          { y: 480 },
-          { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-          { y: 500 },
-          { y: 480 },
-          { y: 510 }
-        ]
-      }]
-    });
-    chart.render();
-    
-    }
-    </script>
+ 
 </head>
 
 <body class="">
@@ -53,7 +22,7 @@
     <div class="sidebar" data-color="purple" data-background-color="white" >
     
       <div class="logo"><a href="#" class="simple-text logo-normal">
-          The Noble Cause
+          Caring Core
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -69,11 +38,17 @@
               <p>User Profile</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./medicinebox.html">
+              <i class="material-icons">smartphone</i>
+              <p>Smart Medicine Box</p>
+            </a>
+          </li>
          
           <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
+            <a class="nav-link" href="./team.html">
+              <i class="material-icons">people</i>
+              <p>Our Team</p>
             </a>
           </li>
           
@@ -204,6 +179,26 @@
               </div>
             </div>
           </div>
+          <div class="row ">
+            <div class="col-md-4 mx-auto">
+              <div class="card card-chart">
+                <div class="card-header card-header-success">
+                  <div class="ct-chart" id="dailySalesChart"></div>
+                </div>
+               
+              </div>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <div class="ct-chart" id="completedTasksChart"></div>
+                 
+                </div>
+               
+              </div>
+            </div>
+          
+          </div>
           <div class="row">
             <div id="chartContainer" style="height: 300px; width: 100%;"></div>
            
@@ -218,11 +213,10 @@
     </div>
   </div>
   
-  <!--   Core JS Files   -->
   <script src="../js/core/jquery.min.js"></script>
   <script src="../js/core/popper.min.js"></script>
   <script src="../js/core/bootstrap-material-design.min.js"></script>
- 
+  <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
   
  
   <!-- Chartist JS -->
@@ -232,7 +226,7 @@
  
   <script src="../js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
   
-  
+  <script src="../js/data.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -331,14 +325,14 @@
       });
     });
   </script>
-   <script>
+  <script>
     $(document).ready(function() {
-      
+      // Javascript method's body can be found in assets/js/demos.js
       md.initDashboardPageCharts();
 
     });
   </script>
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 
 </html>
+ 
